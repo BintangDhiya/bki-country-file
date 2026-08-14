@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { heroFlags, siteConfig } from "@/data/site-data";
 
 // Flag CDN helper — uses flagcdn.com for crisp flag images
@@ -10,7 +11,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full px-8 pt-0 pb-16 flex flex-col gap-0"
+      className="relative w-full px-8 pt-0 pb-16 flex flex-col justify-between min-h-[calc(100vh-theme(spacing.20))]"
       aria-labelledby="hero-heading"
     >
       {/* ── Top row: large headline + flag mosaic ── */}
@@ -54,15 +55,17 @@ export function Hero() {
 
         {/* Flag mosaic — 2 columns × 3 rows */}
         <div
-          className="grid grid-cols-2 gap-2 shrink-0 self-start mt-2"
+          className="grid grid-cols-2 gap-2 shrink-0 self-center mt-2"
           aria-label="Featured country flags"
           role="img"
         >
           {heroFlags.map((flag) => (
-            <div
+            <Link
               key={flag.flagCode}
-              className="relative overflow-hidden rounded-sm shadow-md w-[70px] h-[46px]"
+              href={flag.href}
               title={flag.country}
+              aria-label={`Go to ${flag.country} country file`}
+              className="relative overflow-hidden shadow-md w-[70px] h-[46px] block transition-transform duration-150 hover:scale-105"
             >
               <Image
                 src={flagUrl(flag.flagCode)}
@@ -72,13 +75,13 @@ export function Hero() {
                 sizes="70px"
                 unoptimized
               />
-            </div>
+            </Link>
           ))}
         </div>
       </div>
 
       {/* ── Sub-headline ── */}
-      <div className="mt-14 max-w-lg">
+      <div className="max-w-lg">
         <p className="text-[clamp(1.6rem,5vw,2.4rem)] font-serif font-normal text-[#0d3b5e] leading-tight">
           Starts <strong className="font-bold">from here</strong>
         </p>

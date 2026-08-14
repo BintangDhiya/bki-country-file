@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   return (
-    <header className="w-full flex justify-end items-center px-8 py-5">
+    <header className="w-full flex justify-end items-center px-8 py-20">
       <nav className="flex items-center gap-4">
         {brands.map((brand) => (
           <Link

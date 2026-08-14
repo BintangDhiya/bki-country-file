@@ -83,12 +83,12 @@ export const countries: Country[] = [
 // Displayed in the 3×2 mosaic next to the headline
 
 export const heroFlags = [
-  { country: "Indonesia", flagCode: "ID", flagEmoji: "🇮🇩" },
-  { country: "Timor Leste", flagCode: "TL", flagEmoji: "🇹🇱" },
-  { country: "Panama", flagCode: "PA", flagEmoji: "🇵🇦" },
-  { country: "Nauru", flagCode: "NR", flagEmoji: "🇳🇷" },
-  { country: "China", flagCode: "CN", flagEmoji: "🇨🇳" },
-  { country: "Mongolia", flagCode: "MN", flagEmoji: "🇲🇳" },
+  { country: "Indonesia", flagCode: "ID", flagEmoji: "🇮🇩", href: "/countries/indonesia" },
+  { country: "Timor Leste", flagCode: "TL", flagEmoji: "🇹🇱", href: "/countries/timor-leste" },
+  { country: "Panama", flagCode: "PA", flagEmoji: "🇵🇦", href: "/countries/panama" },
+  { country: "Nauru", flagCode: "NR", flagEmoji: "🇳🇷", href: "/countries/nauru" },
+  { country: "China", flagCode: "CN", flagEmoji: "🇨🇳", href: "/countries/china" },
+  { country: "Mongolia", flagCode: "MN", flagEmoji: "🇲🇳", href: "/countries/mongolia" },
 ];
 
 // ─── Contact ────────────────────────────────────────────────────────────────

@@ -9,7 +9,7 @@ export default function Home() {
       {/* ── Ice-blue top section ── */}
       <div className="flex flex-col flex-1 bg-[hsl(190,40%,92%)]">
         {/* Single centered column — Navbar, Hero, and Buttons all share this width */}
-        <div className="w-full max-w-2xl mx-auto flex flex-col flex-1">
+        <div className="w-full mx-auto px-4 flex flex-col flex-1">
           <Navbar />
 
           <main className="flex flex-col flex-1">
