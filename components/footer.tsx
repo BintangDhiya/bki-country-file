@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   brands,
@@ -5,6 +7,7 @@ import {
   footerLinks,
   socialLinks,
 } from "@/data/site-data";
+import { motion } from "motion/react";
 
 // ── Inline SVG social icons ──────────────────────────────────────────────────
 
@@ -69,16 +72,20 @@ export function Footer() {
       <div className="px-8 pb-10 pt-16 flex items-end justify-between gap-8">
         {/* Left: large tagline + logos */}
         <div className="flex flex-col gap-6">
-          <p
+          <motion.p
             className="text-[clamp(3rem,10vw,5.5rem)] font-serif font-normal text-[#0d3b5e] leading-none tracking-tight select-none"
             aria-label="Make your mark"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
             Make <em className="italic font-light">your</em>
             <br />
             <span className="opacity-20 text-[clamp(3.5rem,11vw,6.5rem)]">
               mark
             </span>
-          </p>
+          </motion.p>
 
           {/* Brand logos row */}
           <div className="flex items-center gap-4">
