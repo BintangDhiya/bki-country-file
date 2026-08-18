@@ -96,14 +96,14 @@ export function Hero() {
                 href={flag.href}
                 title={flag.country}
                 aria-label={`Go to ${flag.country} country file`}
-                className="relative overflow-hidden shadow-md w-[70px] h-[46px] block transition-transform duration-150 hover:scale-105"
+                className="relative overflow-hidden shadow-md w-[90px] h-[60px] block transition-transform duration-150 hover:scale-105"
               >
                 <Image
                   src={flagUrl(flag.flagCode)}
                   alt={`${flag.country} flag`}
                   fill
                   className="object-cover"
-                  sizes="70px"
+                  sizes="90px"
                   unoptimized
                 />
               </Link>

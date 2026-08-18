@@ -161,22 +161,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      {/* ── Bottom bar ── */}
-      <div className="border-t border-[#0d3b5e]/10 px-8 py-3 flex items-center justify-between">
-        <nav className="flex items-center gap-6" aria-label="Footer navigation">
-          {footerLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-xs text-[#0d3b5e]/60 hover:text-[#0d3b5e] transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <p className="text-xs text-[#0d3b5e]/40">Designed with Canva</p>
-      </div>
     </footer>
   );
 }
